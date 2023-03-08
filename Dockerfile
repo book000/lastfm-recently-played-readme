@@ -17,6 +17,7 @@ WORKDIR /app
 COPY --from=builder /build/.next .next
 COPY --from=builder /build/package.json .
 COPY --from=builder /build/package-lock.json .
+COPY --from=builder /build/public public
 
 ENV NODE_ENV production
 
