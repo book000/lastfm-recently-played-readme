@@ -91,7 +91,7 @@ You can set the `loved_style` parameter to `1`, `2`, `3`, or `4` to customize th
 
 ## Deploying own Vercel project
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2FJeffreyCA%2Flastfm-recently-played-readme&env=API_KEY,VERCEL_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https%3A%2F%2Fgithub.com%2Fbook000%2Flastfm-recently-played-readme&env=API_KEY,VERCEL_URL)
 
 Deploy your own Vercel project using the link above. Next, you'll need to set the `API_KEY` environment variable to your Last.fm API key. You'll also need to set the `VERCEL_URL` system environment variable in the Vercel project settings.
 
@@ -99,7 +99,7 @@ Deploy your own Vercel project using the link above. Next, you'll need to set th
 
 1. Clone Git repo
     ```sh
-    $ git clone https://github.com/JeffreyCA/lastfm-recently-played-readme.git
+    $ git clone https://github.com/book000/lastfm-recently-played-readme.git
     ```
 2. Install Node dependencies
     ```sh
