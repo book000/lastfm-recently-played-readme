@@ -1,26 +1,37 @@
 # Last.fm Recently Played README
 
-Show your recent Last.fm scrobbles on your GitHub profile README. Powered by [Vercel](https://vercel.com).
+Show your recent Last.fm scrobbles on your GitHub profile README.
 
-> Check out [spotify-recently-played-readme](https://github.com/JeffreyCA/spotify-recently-played-readme) for a similar integration for Spotify.
+## What has changed in this Fork?
+
+It is different from [JeffreyCA/lastfm-recently-played-readme](https://github.com/JeffreyCA/lastfm-recently-played-readme) in the following ways:
+
+- **Better artwork retrieval**: Fixed an problem where artwork was not displayed for some songs.
+- **Docker support**: It also works with Docker.
+- **Self hosting**: [Vercel free plan has a 10-second runtime limit](https://vercel.com/docs/concepts/limits/overview#general-limits), which meant that SVGs were sometimes not displayed if it took a long time to retrieve artwork, etc. Self-hosting solves this.
+
+This fork is hosted by following:
+
+- `https://lrpr.amatama.net`: Self-hosting on my server. This is recommended in terms of vercel runtime.
+- `https://lastfm-recently-played-book000.vercel.app`: Hosting by Vercel.
 
 ## Getting Started
 
 Just add the following into your README and set the query parameter `user` to your Last.fm username.
 
 ```md
-![My scrobbles](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01)
+![My scrobbles](https://lrpr.amatama.net/api?user=book000)
 ```
 
-![My scrobbles](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01)
+![My scrobbles](https://lrpr.amatama.net/api?user=book000)
 
 ### Link to Last.fm profile
 
 ```md
-[![My Last.fm](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01)](https://www.last.fm/user/JeffreyCA01)
+[![My Last.fm](https://lrpr.amatama.net/api?user=book000)](https://www.last.fm/user/book000)
 ```
 
-[![My Last.fm](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01)](https://www.last.fm/user/JeffreyCA01)
+[![My Last.fm](https://lrpr.amatama.net/api?user=book000)](https://www.last.fm/user/book000)
 
 ### Custom track count
 
@@ -33,10 +44,10 @@ To a custom number of tracks, pass the query parameter `count` and set it to the
 Example:
 
 ```md
-![My scrobbles](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&count=1)
+![My scrobbles](https://lrpr.amatama.net/api?user=book000&count=1)
 ```
 
-![My scrobbles](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&count=1)
+![My scrobbles](https://lrpr.amatama.net/api?user=book000&count=1)
 
 ### Custom card width
 
@@ -49,10 +60,10 @@ To set a custom card width, pass the query parameter `width` and set it to the d
 Example:
 
 ```md
-![My scrobbles](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&width=600)
+![My scrobbles](https://lrpr.amatama.net/api?user=book000&width=600)
 ```
 
-![My scrobbles](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&width=600)
+![My scrobbles](https://lrpr.amatama.net/api?user=book000&width=600)
 
 ### Show loved tracks
 
@@ -63,10 +74,10 @@ Set the `loved` parameter to `true` to show a heart indicator next to your loved
 Example:
 
 ```md
-![My scrobbles](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&loved=true)
+![My scrobbles](https://lrpr.amatama.net/api?user=book000&loved=true)
 ```
 
-![My scrobbles](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&loved=true)
+![My scrobbles](https://lrpr.amatama.net/api?user=book000&loved=true)
 
 **Further customization:**
 
@@ -76,7 +87,7 @@ You can set the `loved_style` parameter to `1`, `2`, `3`, or `4` to customize th
 
 |                                                        Style 1                                                         |                                                        Style 2                                                         |                                                        Style 3                                                         |                                                        Style 4                                                         |
 | :--------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
-| ![](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&width=300&count=2&loved=true&loved_style=1) | ![](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&width=300&count=2&loved=true&loved_style=2) | ![](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&width=300&count=2&loved=true&loved_style=3) | ![](https://lastfm-recently-played-book000.vercel.app/api?user=JeffreyCA01&width=300&count=2&loved=true&loved_style=4) |
+| ![](https://lrpr.amatama.net/api?user=book000&width=300&count=2&loved=true&loved_style=1) | ![](https://lrpr.amatama.net/api?user=book000&width=300&count=2&loved=true&loved_style=2) | ![](https://lrpr.amatama.net/api?user=book000&width=300&count=2&loved=true&loved_style=3) | ![](https://lrpr.amatama.net/api?user=book000&width=300&count=2&loved=true&loved_style=4) |
 
 ## Deploying own Vercel project
 
